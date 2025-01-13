@@ -10,18 +10,18 @@ import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
 
 function themeProvider({ children }) {
-	return (
-		<AuthProvider>
-			<CartProvider>
-				<AppRouterCacheProvider options={cache}>
-					<ThemeProvider theme={theme}>
-						<CssBaseline />
-						{children}
-					</ThemeProvider>
-				</AppRouterCacheProvider>
-			</CartProvider>
-		</AuthProvider>
-	);
+  return (
+    <AuthProvider>
+      <CartProvider>
+        <AppRouterCacheProvider options={cache}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </CartProvider>
+    </AuthProvider>
+  );
 }
 
 export default themeProvider;
